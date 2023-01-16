@@ -14,7 +14,7 @@ pipeline {
  }
  post {
   success {
-    publishHTML()
+    publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'target/site', reportFiles: 'index.html', reportName: 'Surefire report', reportTitles: '', useWrapperFileDirectly: true])
   }
  }
 }
